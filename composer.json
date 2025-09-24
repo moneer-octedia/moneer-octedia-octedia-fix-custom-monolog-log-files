@@ -1,0 +1,21 @@
+{
+    "name": "octedia/fix-monolog-custom-log-files",
+    "description": "Fix Monolog implementations to use custom log files for SaaS Common and Data Exporter modules",
+    "type": "magento2-module",
+    "license": "OSL-3.0",
+    "version": "1.0.0",
+    "require": {
+        "php": "~8.1.0||~8.2.0||~8.3.0||~8.4.0",
+        "magento/framework": "*",
+        "magento/module-data-exporter": "*",
+        "magento/module-saas-common": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Octedia\\FixMonologCustomLogFiles\\": ""
+        }
+    }
+}
