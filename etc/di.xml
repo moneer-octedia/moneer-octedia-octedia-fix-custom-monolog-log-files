@@ -5,19 +5,6 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <virtualType name="CommerceDataExportLogger" type="Magento\DataExporter\Model\Logging\Monolog">
-        <arguments>
-            <argument name="handlers" xsi:type="array">
-            </argument>
-        </arguments>
-    </virtualType>
-    <preference for="Magento\DataExporter\Model\Logging\CommerceDataExportLoggerInterface" type="CommerceDataExportLogger"/>
-
-    <virtualType name="SaaSExportLogger" type="Magento\SaaSCommon\Model\Logging\Monolog">
-        <arguments>
-            <argument name="handlers" xsi:type="array">
-            </argument>
-        </arguments>
-    </virtualType>
-    <preference for="Magento\SaaSCommon\Model\Logging\SaaSExportLoggerInterface" type="SaaSExportLogger"/>
+    <preference for="Magento\DataExporter\Model\Logging\CommerceDataExportLoggerInterface" type="Octedia\FixMonologCustomLogFiles\Model\Logging\DataExporter"/>
+    <preference for="Magento\SaaSCommon\Model\Logging\SaaSExportLoggerInterface" type="Octedia\FixMonologCustomLogFiles\Model\Logging\SaaSCommon"/>
 </config>
